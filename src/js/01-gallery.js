@@ -8,8 +8,6 @@ const cardMarkup = galleryItemsTumb(galleryItems);
 
 galleryContainer.insertAdjacentHTML("beforeend", cardMarkup);
 
-galleryContainer.addEventListener("click", onGalleryContainerClick);
-
 function galleryItemsTumb(galleryItems) {
   return galleryItems
     .map((item) => {
@@ -28,7 +26,10 @@ function galleryItemsTumb(galleryItems) {
     .join("");
 }
 
+galleryContainer.addEventListener("click", onGalleryContainerClick);
+
 function onGalleryContainerClick(e) {
+  e.preventDefault();
   if (e.target.nodeName !== "IMG") {
     return;
   }

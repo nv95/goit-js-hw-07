@@ -33,7 +33,7 @@ function onGalleryContainerClick(e) {
     return;
   }
 }
-let gallety = new SimpleLightbox(".gallery a", {
+let gallery = new SimpleLightbox(".gallery a", {
   captions: true,
   captionsData: "alt",
   captionDelay: 250,
